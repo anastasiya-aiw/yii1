@@ -1,0 +1,545 @@
+2020/01/09 09:42:12 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'testdrive.tbl_popup' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_popup`.
+in D:\OSPanel\domains\yii\testdrive\index.php (13)
+2020/01/09 09:44:03 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'testdrive.tbl_user' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_user`.
+in D:\OSPanel\domains\yii\testdrive\index.php (13)
+2020/01/09 09:44:13 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'testdrive.user' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `user`.
+in D:\OSPanel\domains\yii\testdrive\index.php (13)
+2020/01/09 09:44:24 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'testdrive.tbl_user' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_user`.
+in D:\OSPanel\domains\yii\testdrive\index.php (13)
+2020/01/09 09:44:36 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'testdrive.tbl_popup' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_popup`.
+in D:\OSPanel\domains\yii\testdrive\index.php (13)
+2020/01/09 09:45:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to find the code you requested.' in D:\OSPanel\domains\yii\framework\gii\CCodeGenerator.php:90
+Stack trace:
+#0 D:\OSPanel\domains\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionCode()
+#1 D:\OSPanel\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#2 D:\OSPanel\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#3 D:\OSPanel\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(282): CController->run('code')
+#5 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/model/code')
+#6 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#7 D:\OSPanel\domains\yii\testdrive\index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/testdrive/index.php?r=gii/model/code&id=0
+HTTP_REFERER=http://yii/testdrive/index.php?r=gii/model/index
+---
+2020/01/09 10:42:22 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'testdrive.tbl_migration' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `tbl_migration`.
+2020/01/09 10:42:59 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'tbl_popup' already exists. The SQL statement executed was: CREATE TABLE `tbl_popup` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`title` varchar(255) NOT NULL,
+	`content` text
+).
+2020/01/09 11:25:39 [error] [exception.PDOException] exception 'PDOException' with message 'There is already an active transaction' in D:\OSPanel\domains\yii\framework\db\CDbConnection.php:522
+Stack trace:
+#0 D:\OSPanel\domains\yii\framework\db\CDbConnection.php(522): PDO->beginTransaction()
+#1 D:\OSPanel\domains\yii\testdrive\protected\migrations\m200109_073509_create_popup_table.php(6): CDbConnection->beginTransaction()
+#2 D:\OSPanel\domains\yii\framework\cli\commands\MigrateCommand.php(415): m200109_073509_create_popup_table->up()
+#3 D:\OSPanel\domains\yii\framework\cli\commands\MigrateCommand.php(189): MigrateCommand->migrateUp('m200109_073509_...')
+#4 [internal function]: MigrateCommand->actionRedo(Array)
+#5 D:\OSPanel\domains\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#6 D:\OSPanel\domains\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#7 D:\OSPanel\domains\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#8 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CConsoleApplication->processRequest()
+#9 D:\OSPanel\domains\yii\framework\yiic.php(33): CApplication->run()
+#10 D:\OSPanel\domains\yii\testdrive\protected\yiic.php(7): require_once('D:\\OSPanel\\doma...')
+#11 {main}
+---
+2020/01/09 11:33:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "popup".' in D:\OSPanel\domains\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('popup')
+#1 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\OSPanel\domains\yii\testdrive\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testdrive/?r=popup
+---
+2020/01/09 11:33:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in D:\OSPanel\domains\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#1 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\OSPanel\domains\yii\testdrive\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testdrive/?r=user
+---
+2020/01/09 11:33:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in D:\OSPanel\domains\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#1 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\OSPanel\domains\yii\testdrive\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testdrive/index.php?r=user
+---
+2020/01/09 11:33:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user/admin".' in D:\OSPanel\domains\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user/admin')
+#1 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\OSPanel\domains\yii\testdrive\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/testdrive/index.php?r=user/admin
+---
+2020/01/09 13:45:46 [error] [php] include(Popup.php): failed to open stream: No such file or directory (D:\OSPanel\domains\yii\framework\YiiBase.php:463)
+Stack trace:
+#0 D:\OSPanel\domains\yii\testdrive\protected\migrations\m200109_102543_addcolumn_popup_table.php(10): spl_autoload_call()
+#1 D:\OSPanel\domains\yii\framework\cli\commands\MigrateCommand.php(415): m200109_102543_addcolumn_popup_table->up()
+#2 D:\OSPanel\domains\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp()
+#3 unknown(0): MigrateCommand->actionUp()
+#4 D:\OSPanel\domains\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs()
+#5 D:\OSPanel\domains\yii\framework\console\CConsoleCommandRunner.php(71): MigrateCommand->run()
+#6 D:\OSPanel\domains\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run()
+#7 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CConsoleApplication->processRequest()
+#8 D:\OSPanel\domains\yii\framework\yiic.php(33): CConsoleApplication->run()
+#9 D:\OSPanel\domains\yii\testdrive\protected\yiic.php(7): require_once()
+
+2020/01/09 13:46:55 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'views'. The SQL statement executed was: ALTER TABLE `tbl_popup` ADD `views` int(11).
+2020/01/09 13:46:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S21]: Column already exists: 1060 Duplicate column name 'views'. The SQL statement executed was: ALTER TABLE `tbl_popup` ADD `views` int(11)' in D:\OSPanel\domains\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 D:\OSPanel\domains\yii\framework\db\CDbCommand.php(1405): CDbCommand->execute()
+#1 D:\OSPanel\domains\yii\framework\db\CDbMigration.php(303): CDbCommand->addColumn('tbl_popup', 'views', 'int(11)')
+#2 D:\OSPanel\domains\yii\testdrive\protected\migrations\m200109_102543_addcolumn_popup_table.php(7): CDbMigration->addColumn('tbl_popup', 'views', 'int(11)')
+#3 D:\OSPanel\domains\yii\framework\cli\commands\MigrateCommand.php(415): m200109_102543_addcolumn_popup_table->up()
+#4 D:\OSPanel\domains\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m200109_102543_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 D:\OSPanel\domains\yii\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 D:\OSPanel\domains\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 D:\OSPanel\domains\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CConsoleApplication->processRequest()
+#10 D:\OSPanel\domains\yii\framework\yiic.php(33): CApplication->run()
+#11 D:\OSPanel\domains\yii\testdrive\protected\yiic.php(7): require_once('D:\\OSPanel\\doma...')
+#12 {main}
+---
+2020/01/09 14:22:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "popup" was not found.' in D:\OSPanel\domains\yii\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 D:\OSPanel\domains\yii\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('popup')
+#1 D:\OSPanel\domains\yii\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 D:\OSPanel\domains\yii\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 D:\OSPanel\domains\yii\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 D:\OSPanel\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(282): CController->run('page')
+#6 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#8 D:\OSPanel\domains\yii\testdrive\index.php(14): CApplication->run()
+#9 {main}
+REQUEST_URI=/testdrive/index.php?r=site/page&view=popup
+---
+2020/01/09 14:37:15 [error] [exception.CException] exception 'CException' with message 'PopupController and its behaviors do not have a method or closure named "findModel".' in D:\OSPanel\domains\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\OSPanel\domains\yii\testdrive\protected\controllers\PopupController.php(55): CComponent->__call('findModel', Array)
+#1 D:\OSPanel\domains\yii\testdrive\protected\controllers\PopupController.php(55): PopupController->findModel('1')
+#2 [internal function]: PopupController->actionView('1')
+#3 D:\OSPanel\domains\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PopupController), Array)
+#4 D:\OSPanel\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PopupController), Object(ReflectionMethod), Array)
+#5 D:\OSPanel\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 D:\OSPanel\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 D:\OSPanel\domains\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#9 D:\OSPanel\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 D:\OSPanel\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 D:\OSPanel\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#14 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('popup/view')
+#15 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 D:\OSPanel\domains\yii\testdrive\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/testdrive/index.php?r=popup/view&id=1
+HTTP_REFERER=http://yii/testdrive/index.php?r=popup/admin
+---
+2020/01/09 14:37:29 [error] [exception.CException] exception 'CException' with message 'PopupController and its behaviors do not have a method or closure named "updateCounters".' in D:\OSPanel\domains\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\OSPanel\domains\yii\testdrive\protected\controllers\PopupController.php(57): CComponent->__call('updateCounters', Array)
+#1 D:\OSPanel\domains\yii\testdrive\protected\controllers\PopupController.php(57): PopupController->updateCounters(Array)
+#2 [internal function]: PopupController->actionView('1')
+#3 D:\OSPanel\domains\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PopupController), Array)
+#4 D:\OSPanel\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PopupController), Object(ReflectionMethod), Array)
+#5 D:\OSPanel\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 D:\OSPanel\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 D:\OSPanel\domains\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#9 D:\OSPanel\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 D:\OSPanel\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 D:\OSPanel\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#14 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('popup/view')
+#15 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#16 D:\OSPanel\domains\yii\testdrive\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/testdrive/index.php?r=popup/view&id=1
+HTTP_REFERER=http://yii/testdrive/index.php?r=popup/admin
+---
+2020/01/09 15:01:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\OSPanel\domains\yii\testdrive\protected\controllers\PopupController.php:59
+Stack trace:
+#0 [internal function]: PopupController->actionView('2')
+#1 D:\OSPanel\domains\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PopupController), Array)
+#2 D:\OSPanel\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PopupController), Object(ReflectionMethod), Array)
+#3 D:\OSPanel\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 D:\OSPanel\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 D:\OSPanel\domains\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#7 D:\OSPanel\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 D:\OSPanel\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 D:\OSPanel\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#12 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('popup/view')
+#13 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 D:\OSPanel\domains\yii\testdrive\index.php(14): CApplication->run()
+#15 {main}
+REQUEST_URI=/testdrive/index.php?r=popup/view&id=2
+HTTP_REFERER=http://yii/testdrive/index.php?r=popup/index
+---
+2020/01/09 15:01:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\OSPanel\domains\yii\testdrive\protected\controllers\PopupController.php:59
+Stack trace:
+#0 [internal function]: PopupController->actionView('1')
+#1 D:\OSPanel\domains\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PopupController), Array)
+#2 D:\OSPanel\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PopupController), Object(ReflectionMethod), Array)
+#3 D:\OSPanel\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 D:\OSPanel\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 D:\OSPanel\domains\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#7 D:\OSPanel\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 D:\OSPanel\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 D:\OSPanel\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#12 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('popup/view')
+#13 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 D:\OSPanel\domains\yii\testdrive\index.php(14): CApplication->run()
+#15 {main}
+REQUEST_URI=/testdrive/index.php?r=popup/view&id=1
+---
+2020/01/09 15:02:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\OSPanel\domains\yii\testdrive\protected\controllers\PopupController.php:59
+Stack trace:
+#0 [internal function]: PopupController->actionView('2')
+#1 D:\OSPanel\domains\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PopupController), Array)
+#2 D:\OSPanel\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PopupController), Object(ReflectionMethod), Array)
+#3 D:\OSPanel\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 D:\OSPanel\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 D:\OSPanel\domains\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#7 D:\OSPanel\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 D:\OSPanel\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 D:\OSPanel\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#12 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('popup/view')
+#13 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 D:\OSPanel\domains\yii\testdrive\index.php(14): CApplication->run()
+#15 {main}
+REQUEST_URI=/testdrive/index.php?r=popup/view&id=2
+HTTP_REFERER=http://yii/testdrive/index.php?r=popup/index
+---
+2020/01/09 15:02:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\OSPanel\domains\yii\testdrive\protected\controllers\PopupController.php:59
+Stack trace:
+#0 [internal function]: PopupController->actionView('2')
+#1 D:\OSPanel\domains\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PopupController), Array)
+#2 D:\OSPanel\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PopupController), Object(ReflectionMethod), Array)
+#3 D:\OSPanel\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 D:\OSPanel\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 D:\OSPanel\domains\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#7 D:\OSPanel\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 D:\OSPanel\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 D:\OSPanel\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#12 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('popup/view')
+#13 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 D:\OSPanel\domains\yii\testdrive\index.php(14): CApplication->run()
+#15 {main}
+REQUEST_URI=/testdrive/index.php?r=popup/view&id=2
+HTTP_REFERER=http://yii/testdrive/index.php?r=popup/index
+---
+2020/01/09 15:02:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\OSPanel\domains\yii\testdrive\protected\controllers\PopupController.php:59
+Stack trace:
+#0 [internal function]: PopupController->actionView('2')
+#1 D:\OSPanel\domains\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PopupController), Array)
+#2 D:\OSPanel\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PopupController), Object(ReflectionMethod), Array)
+#3 D:\OSPanel\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 D:\OSPanel\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 D:\OSPanel\domains\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#7 D:\OSPanel\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 D:\OSPanel\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 D:\OSPanel\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#12 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('popup/view')
+#13 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 D:\OSPanel\domains\yii\testdrive\index.php(14): CApplication->run()
+#15 {main}
+REQUEST_URI=/testdrive/index.php?r=popup/view&id=2
+HTTP_REFERER=http://yii/testdrive/index.php?r=popup/index
+---
+2020/01/09 15:03:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\OSPanel\domains\yii\testdrive\protected\controllers\PopupController.php:59
+Stack trace:
+#0 [internal function]: PopupController->actionView('2')
+#1 D:\OSPanel\domains\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PopupController), Array)
+#2 D:\OSPanel\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PopupController), Object(ReflectionMethod), Array)
+#3 D:\OSPanel\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 D:\OSPanel\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 D:\OSPanel\domains\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#7 D:\OSPanel\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 D:\OSPanel\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 D:\OSPanel\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#12 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('popup/view')
+#13 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 D:\OSPanel\domains\yii\testdrive\index.php(14): CApplication->run()
+#15 {main}
+REQUEST_URI=/testdrive/index.php?r=popup/view&id=2
+HTTP_REFERER=http://yii/testdrive/index.php?r=popup/index
+---
+2020/01/09 15:21:34 [error] [exception.CException] exception 'CException' with message 'The asset "D:\OSPanel\domains\yii\testdrive\protected\extensions\myExtension\assets/modal.css" to be published does not exist.' in D:\OSPanel\domains\yii\framework\web\CAssetManager.php:257
+Stack trace:
+#0 D:\OSPanel\domains\yii\testdrive\protected\views\popup\view.php(8): CAssetManager->publish('D:\\OSPanel\\doma...')
+#1 D:\OSPanel\domains\yii\framework\web\CBaseController.php(126): require('D:\\OSPanel\\doma...')
+#2 D:\OSPanel\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\OSPanel\\doma...', Array, true)
+#3 D:\OSPanel\domains\yii\framework\web\CController.php(872): CBaseController->renderFile('D:\\OSPanel\\doma...', Array, true)
+#4 D:\OSPanel\domains\yii\framework\web\CController.php(785): CController->renderPartial('view', Array, true)
+#5 D:\OSPanel\domains\yii\testdrive\protected\controllers\PopupController.php(71): CController->render('view', Array)
+#6 [internal function]: PopupController->actionView('1')
+#7 D:\OSPanel\domains\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PopupController), Array)
+#8 D:\OSPanel\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PopupController), Object(ReflectionMethod), Array)
+#9 D:\OSPanel\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 D:\OSPanel\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 D:\OSPanel\domains\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#13 D:\OSPanel\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 D:\OSPanel\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 D:\OSPanel\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#18 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('popup/view')
+#19 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#20 D:\OSPanel\domains\yii\testdrive\index.php(14): CApplication->run()
+#21 {main}
+REQUEST_URI=/testdrive/index.php?r=popup/view&id=1
+---
+2020/01/09 15:42:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\OSPanel\domains\yii\testdrive\protected\controllers\PopupController.php:60
+Stack trace:
+#0 [internal function]: PopupController->actionView('2')
+#1 D:\OSPanel\domains\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PopupController), Array)
+#2 D:\OSPanel\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PopupController), Object(ReflectionMethod), Array)
+#3 D:\OSPanel\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 D:\OSPanel\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 D:\OSPanel\domains\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#7 D:\OSPanel\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 D:\OSPanel\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 D:\OSPanel\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#12 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('popup/view')
+#13 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 D:\OSPanel\domains\yii\testdrive\index.php(14): CApplication->run()
+#15 {main}
+REQUEST_URI=/testdrive/index.php?r=popup/view&id=2
+HTTP_REFERER=http://yii/testdrive/index.php?r=popup/index
+---
+2020/01/09 15:50:07 [error] [exception.CException] exception 'CException' with message 'The asset "D:\OSPanel\domains\yii\testdrive\protected/css/" to be published does not exist.' in D:\OSPanel\domains\yii\framework\web\CAssetManager.php:257
+Stack trace:
+#0 D:\OSPanel\domains\yii\testdrive\protected\views\popup\view.php(12): CAssetManager->publish('D:\\OSPanel\\doma...')
+#1 D:\OSPanel\domains\yii\framework\web\CBaseController.php(126): require('D:\\OSPanel\\doma...')
+#2 D:\OSPanel\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\OSPanel\\doma...', Array, true)
+#3 D:\OSPanel\domains\yii\framework\web\CController.php(872): CBaseController->renderFile('D:\\OSPanel\\doma...', Array, true)
+#4 D:\OSPanel\domains\yii\framework\web\CController.php(785): CController->renderPartial('view', Array, true)
+#5 D:\OSPanel\domains\yii\testdrive\protected\controllers\PopupController.php(71): CController->render('view', Array)
+#6 [internal function]: PopupController->actionView('1')
+#7 D:\OSPanel\domains\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PopupController), Array)
+#8 D:\OSPanel\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PopupController), Object(ReflectionMethod), Array)
+#9 D:\OSPanel\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 D:\OSPanel\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 D:\OSPanel\domains\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#13 D:\OSPanel\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 D:\OSPanel\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 D:\OSPanel\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#18 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('popup/view')
+#19 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#20 D:\OSPanel\domains\yii\testdrive\index.php(14): CApplication->run()
+#21 {main}
+REQUEST_URI=/testdrive/index.php?r=popup/view&id=1
+---
+2020/01/09 15:52:51 [error] [exception.CException] exception 'CException' with message 'The asset "D:\OSPanel\domains\yii\testdrive\protected/js/" to be published does not exist.' in D:\OSPanel\domains\yii\framework\web\CAssetManager.php:257
+Stack trace:
+#0 D:\OSPanel\domains\yii\testdrive\protected\views\popup\view.php(13): CAssetManager->publish('D:\\OSPanel\\doma...')
+#1 D:\OSPanel\domains\yii\framework\web\CBaseController.php(126): require('D:\\OSPanel\\doma...')
+#2 D:\OSPanel\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\OSPanel\\doma...', Array, true)
+#3 D:\OSPanel\domains\yii\framework\web\CController.php(872): CBaseController->renderFile('D:\\OSPanel\\doma...', Array, true)
+#4 D:\OSPanel\domains\yii\framework\web\CController.php(785): CController->renderPartial('view', Array, true)
+#5 D:\OSPanel\domains\yii\testdrive\protected\controllers\PopupController.php(71): CController->render('view', Array)
+#6 [internal function]: PopupController->actionView('1')
+#7 D:\OSPanel\domains\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PopupController), Array)
+#8 D:\OSPanel\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PopupController), Object(ReflectionMethod), Array)
+#9 D:\OSPanel\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#11 D:\OSPanel\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 D:\OSPanel\domains\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#13 D:\OSPanel\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#15 D:\OSPanel\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 D:\OSPanel\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#18 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('popup/view')
+#19 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#20 D:\OSPanel\domains\yii\testdrive\index.php(14): CApplication->run()
+#21 {main}
+REQUEST_URI=/testdrive/index.php?r=popup/view&id=1
+---
+2020/01/09 21:54:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\OpenServer\OSPanel\domains\yii\testdrive\protected\controllers\PopupController.php:60
+Stack trace:
+#0 [internal function]: PopupController->actionView('2')
+#1 C:\OpenServer\OSPanel\domains\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PopupController), Array)
+#2 C:\OpenServer\OSPanel\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PopupController), Object(ReflectionMethod), Array)
+#3 C:\OpenServer\OSPanel\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\OpenServer\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\OpenServer\OSPanel\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\OpenServer\OSPanel\domains\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#7 C:\OpenServer\OSPanel\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\OpenServer\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\OpenServer\OSPanel\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\OpenServer\OSPanel\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\OpenServer\OSPanel\domains\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#12 C:\OpenServer\OSPanel\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('popup/view')
+#13 C:\OpenServer\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\OpenServer\OSPanel\domains\yii\testdrive\index.php(14): CApplication->run()
+#15 {main}
+REQUEST_URI=/testdrive/index.php?r=popup/view&id=2
+---
+2020/01/10 08:22:20 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "field".' in D:\OSPanel\domains\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 D:\OSPanel\domains\yii\testdrive\protected\views\popup\_form.php(37): CComponent->__call('field', Array)
+#1 D:\OSPanel\domains\yii\testdrive\protected\views\popup\_form.php(37): CActiveForm->field(Object(Popup), 'status')
+#2 D:\OSPanel\domains\yii\framework\web\CBaseController.php(126): require('D:\\OSPanel\\doma...')
+#3 D:\OSPanel\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\OSPanel\\doma...', Array, true)
+#4 D:\OSPanel\domains\yii\framework\web\CController.php(872): CBaseController->renderFile('D:\\OSPanel\\doma...', Array, true)
+#5 D:\OSPanel\domains\yii\testdrive\protected\views\popup\update.php(21): CController->renderPartial('_form', Array)
+#6 D:\OSPanel\domains\yii\framework\web\CBaseController.php(126): require('D:\\OSPanel\\doma...')
+#7 D:\OSPanel\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\OSPanel\\doma...', Array, true)
+#8 D:\OSPanel\domains\yii\framework\web\CController.php(872): CBaseController->renderFile('D:\\OSPanel\\doma...', Array, true)
+#9 D:\OSPanel\domains\yii\framework\web\CController.php(785): CController->renderPartial('update', Array, true)
+#10 D:\OSPanel\domains\yii\testdrive\protected\controllers\PopupController.php(118): CController->render('update', Array)
+#11 [internal function]: PopupController->actionUpdate('1')
+#12 D:\OSPanel\domains\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PopupController), Array)
+#13 D:\OSPanel\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PopupController), Object(ReflectionMethod), Array)
+#14 D:\OSPanel\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 D:\OSPanel\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 D:\OSPanel\domains\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#18 D:\OSPanel\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 D:\OSPanel\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 D:\OSPanel\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#23 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('popup/update')
+#24 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#25 D:\OSPanel\domains\yii\testdrive\index.php(14): CApplication->run()
+#26 {main}
+REQUEST_URI=/testdrive/index.php?r=popup/update&id=1
+HTTP_REFERER=http://yii/testdrive/index.php?r=popup/admin
+---
+2020/01/10 09:21:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "contact".' in D:\OSPanel\domains\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('contact')
+#1 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 D:\OSPanel\domains\yii\testdrive\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/testdrive/contact
+---
+2020/01/10 09:22:13 [error] [exception.CException] exception 'CException' with message 'Property "CUrlManager.enableStrictParsing" is not defined.' in D:\OSPanel\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\OSPanel\domains\yii\framework\YiiBase.php(227): CComponent->__set('enableStrictPar...', true)
+#1 D:\OSPanel\domains\yii\framework\base\CModule.php(393): YiiBase::createComponent(Array)
+#2 D:\OSPanel\domains\yii\framework\base\CApplication.php(531): CModule->getComponent('urlManager')
+#3 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(140): CApplication->getUrlManager()
+#4 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 D:\OSPanel\domains\yii\testdrive\index.php(14): CApplication->run()
+#6 {main}
+REQUEST_URI=/testdrive/site/contact
+HTTP_REFERER=http://yii/testdrive/popup
+---
+2020/01/10 09:22:16 [error] [exception.CException] exception 'CException' with message 'Property "CUrlManager.enableStrictParsing" is not defined.' in D:\OSPanel\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\OSPanel\domains\yii\framework\YiiBase.php(227): CComponent->__set('enableStrictPar...', true)
+#1 D:\OSPanel\domains\yii\framework\base\CModule.php(393): YiiBase::createComponent(Array)
+#2 D:\OSPanel\domains\yii\framework\base\CApplication.php(531): CModule->getComponent('urlManager')
+#3 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(140): CApplication->getUrlManager()
+#4 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 D:\OSPanel\domains\yii\testdrive\index.php(14): CApplication->run()
+#6 {main}
+REQUEST_URI=/testdrive/
+---
+2020/01/10 09:24:08 [error] [exception.CException] exception 'CException' with message 'Property "CUrlManager.enableStrictParsing" is not defined.' in D:\OSPanel\domains\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 D:\OSPanel\domains\yii\framework\YiiBase.php(227): CComponent->__set('enableStrictPar...', true)
+#1 D:\OSPanel\domains\yii\framework\base\CModule.php(393): YiiBase::createComponent(Array)
+#2 D:\OSPanel\domains\yii\framework\base\CApplication.php(531): CModule->getComponent('urlManager')
+#3 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(140): CApplication->getUrlManager()
+#4 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 D:\OSPanel\domains\yii\testdrive\index.php(14): CApplication->run()
+#6 {main}
+REQUEST_URI=/testdrive/
+HTTP_REFERER=http://yii/testdrive/site/contact
+---
+2020/01/10 09:24:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "default".' in D:\OSPanel\domains\yii\framework\web\CController.php:486
+Stack trace:
+#0 D:\OSPanel\domains\yii\framework\web\CController.php(270): CController->missingAction('default')
+#1 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(282): CController->run('default')
+#2 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/default/in...')
+#3 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 D:\OSPanel\domains\yii\testdrive\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/testdrive/
+HTTP_REFERER=http://yii/testdrive/site/contact
+---
+2020/01/13 11:59:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewjs".' in D:\OSPanel\domains\yii\framework\web\CController.php:486
+Stack trace:
+#0 D:\OSPanel\domains\yii\framework\web\CController.php(270): CController->missingAction('viewjs')
+#1 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(282): CController->run('viewjs')
+#2 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('popup/viewjs')
+#3 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 D:\OSPanel\domains\yii\testdrive\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/testdrive/popup/viewjs/8
+HTTP_REFERER=http://yii/testdrive/popup/create
+---
+2020/01/13 12:00:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "viewjs".' in D:\OSPanel\domains\yii\framework\web\CController.php:486
+Stack trace:
+#0 D:\OSPanel\domains\yii\framework\web\CController.php(270): CController->missingAction('viewjs')
+#1 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(282): CController->run('viewjs')
+#2 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('popup/viewjs')
+#3 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 D:\OSPanel\domains\yii\testdrive\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/testdrive/popup/viewjs/8
+---
+2020/01/13 12:39:45 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.hostInfo" is not defined.' in D:\OSPanel\domains\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\OSPanel\domains\yii\framework\base\CModule.php(105): CComponent->__get('hostInfo')
+#1 D:\OSPanel\domains\yii\testdrive\protected\views\popup\viewjs.php(5): CModule->__get('hostInfo')
+#2 D:\OSPanel\domains\yii\framework\web\CBaseController.php(126): require('D:\\OSPanel\\doma...')
+#3 D:\OSPanel\domains\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\OSPanel\\doma...', Array, true)
+#4 D:\OSPanel\domains\yii\framework\web\CController.php(872): CBaseController->renderFile('D:\\OSPanel\\doma...', Array, true)
+#5 D:\OSPanel\domains\yii\framework\web\CController.php(785): CController->renderPartial('viewjs', Array, true)
+#6 D:\OSPanel\domains\yii\testdrive\protected\controllers\PopupController.php(94): CController->render('viewjs', Array)
+#7 [internal function]: PopupController->actionViewjs('9')
+#8 D:\OSPanel\domains\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(PopupController), Array)
+#9 D:\OSPanel\domains\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(PopupController), Object(ReflectionMethod), Array)
+#10 D:\OSPanel\domains\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 D:\OSPanel\domains\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 D:\OSPanel\domains\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#14 D:\OSPanel\domains\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 D:\OSPanel\domains\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 D:\OSPanel\domains\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 D:\OSPanel\domains\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(282): CController->run('viewjs')
+#19 D:\OSPanel\domains\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('popup/viewjs')
+#20 D:\OSPanel\domains\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 D:\OSPanel\domains\yii\testdrive\index.php(14): CApplication->run()
+#22 {main}
+REQUEST_URI=/testdrive/popup/viewjs/9
+---
